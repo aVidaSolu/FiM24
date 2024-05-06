@@ -47,6 +47,7 @@ void readAngles(double *x, double *y, double *z);            //get current rotat
 void setServos(int serv, int value);                         //set servo serv to a specific PWM value
 void updateVal(float *inp_val, float req_val);               //update value inp_val closer towards req_val (PID CONTROLLER)
 void updateVal(float *inp_val, float req_val, float new_K);  //update value inp_val closer towards req_val (PID CONTROLLER), set K value manually
+void updateVal(float *inp_val, float req_val, float new_K, float new_I, float new_D);  //update value inp_val closer towards req_val (PID CONTROLLER), set PID manually
 int ang_to_servo_val(int angle);                             //map angle (-90, 90) to servo PWM value (80-575)
 
 void reset_legs();  //initialize leg positions
